@@ -1,0 +1,14 @@
+{
+  "name": "simpleblog",
+  "version": "1.0.0",
+  "description": "a simple blog built with php and styled with bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jasmine Vout",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

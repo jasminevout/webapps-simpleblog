@@ -1,0 +1,235 @@
+//VARIABLES
+$body-bg: #F7F7F6;
+
+$theme-colors: (
+  "primary": #B65426
+);
+
+$primary: #B65426;
+
+//Typography
+$font-family-sans-serif:      "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family: "Martel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-color: #B65426;
+$body-color: #322A21;
+
+//Anchor
+$link-color: #898989;
+$link-hover-color: darken($primary, 15%);
+$link-hover-decoration: none;
+
+
+
+//BOOTSTRAP SCSS
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+
+//CUSTOM STYLING
+//Anchors
+a {
+    transition: color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    a {
+        color: $headings-color;
+        &:active,
+        &:hover,
+        &:focus {
+            color: darken($headings-color, 15%);
+        }
+    }
+}
+
+.add-btn {
+    a {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;    
+        color: $body-bg;
+
+    }
+}
+.submit-btn {
+    .btn-link {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;    
+        color: $body-bg;
+    }
+}
+
+.tag {
+    font-size: 0.9rem;
+    &-cloud {
+        &:after {
+            content: ", ";
+        }
+        &:after:last-of-type {
+            content: none;
+        }    
+    }
+}
+
+.readmore {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    a {
+        color: $body-color;
+        &:active,
+        &:hover,
+        &:focus {
+            color: darken($primary, 15%);
+        }
+    }
+}
+
+//Typography
+//Header
+.page-title {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin-top: 1rem;
+    a {
+        color: $body-color;
+    }
+}
+
+.loggedinas {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: $link-color;
+    &-user {
+        color: darken($link-color, 30%);
+    }
+}
+
+#adminmenu {
+    li {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        text-align: right;
+        padding-left: 0.5rem;
+        a {
+            color: $body-color;
+            &:active,
+            &:hover,
+            &:focus {
+                color: darken($primary, 15%);
+            }
+        }     
+    }
+}
+
+.posts-in {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: $link-color;
+    text-transform: uppercase;
+}
+
+//Containers
+.margin-top {
+    margin-top: 2rem;
+}
+
+//Pagination
+.pagination {
+    margin: 2rem auto;
+}
+.page-link {
+    color: $link-color;
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken($link-color, 15%);
+    }
+}
+.page-item {
+    &.active .page-link {
+        color: $link-color;
+        font-weight: 700;
+        background-color: $body-bg;
+        border-color: $pagination-border-color;
+    }
+    &.disabled .page-link {
+        background-color: $body-bg;
+    }
+}
+
+//Misc
+#main {
+    .post {
+        &-title {
+            font-size: 2rem;
+            margin-top: 4rem;
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+        &-meta {
+            font-family: $font-family-sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: $link-color;
+            text-transform: uppercase;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#sidebar {
+    h1 {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: lighten($body-color, $amount: 15%);
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+    }
+}
+
+#login {
+    width: 400px;
+    margin: 2rem auto 0;
+}
+
+.login-form {
+    label {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: $body-color;
+        text-transform: uppercase;
+    }
+}
+
+//Medium Devices
+@media (min-width: 768px) {
+    #sidebar {
+        padding-left: 2rem;
+        border-left: 1px solid $gray-300;
+        h1 {
+            font-size: 1rem;
+        }
+        ul li {
+            font-size: 0.9rem;
+        }
+    }
+}
